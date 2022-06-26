@@ -1,0 +1,212 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5;
+
+  --ff-timer: 'Roboto', sans-serif;
+
+  /* rgb(192, 184, 184) */
+  --bg-body-light: #ffffff;
+  --bg-body-black: hsla(240, 5%, 7%, 1);
+  --svg-focus-black: #ffffff;
+  --svg-black: hsla(195, 74%, 15%, 1);
+  --svg-light: hsla(194, 97%, 31%, 1);
+  --fc-black: #ffffff;
+  --fc-light: hsla(240, 6%, 21%, 1);
+  --bg-button-light: hsla(240, 9%, 89%, 1);
+  --bg-button-black: hsla(240, 6%, 17%, 1);
+  --bg-svg-light: hsla(240, 6%, 21%, 1);
+  --bg-svg-black: hsla(240, 7%, 78%, 1);
+}
+
+body.day{
+  background: var(--bg-body-light);
+  color: var(--fc-light);
+}
+
+body{
+  background: var(--bg-body-black);
+  font-family: var(--ff-timer);
+  color: var(--fc-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+
+section.bg{
+  position: fixed;
+  right: 6.4rem;
+  top: 6.4rem;
+  cursor: pointer;
+}
+section.bg .day{
+  display: none;
+}
+
+body.day section.bg .black{
+  display: none;
+}
+body.day section.bg .day{
+  display: initial;
+}
+
+
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 19.2rem;
+}
+
+button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#controls path:nth-child(1){
+  fill: var(--bg-svg-black);
+}
+
+body.day #controls path:nth-child(1){
+  fill: var(--bg-svg-light);
+}
+
+
+body.day #sounds path:nth-child(1){
+  fill: var(--bg-button-light);
+}
+
+#sounds path:nth-child(1){
+  fill: var(--bg-button-black);
+}
+
+body.day #sounds .focus path:nth-child(1){
+  fill: var(--svg-light);
+}
+
+/* .stop:focus path:nth-child(1), */
+/* #controls .focus path:nth-child(1), */
+#sounds .focus path:nth-child(1){
+  fill: var(--svg-black);
+}
+
+#sounds path:nth-child(2) {
+  fill: var(--bg-svg-black);
+}
+
+body.day #sounds .focus path:nth-child(2) {
+  fill: var(--bg-body-light);
+}
+
+body.day #sounds path:nth-child(2) {
+  fill: var(--bg-svg-light);
+}
+
+#sounds .focus path:nth-child(2) {
+  fill: var(--svg-focus-black);
+}
+
+#timer{
+  font-weight: 500;
+  font-size: 12.6rem;
+  line-height: 14.8rem;
+  text-align: center;
+}
+
+#controls{
+  display: flex;
+  justify-content: space-between;
+}
+
+#sounds{
+  display: grid;
+  grid-template-areas: 
+  "forest rain"
+  "coffee bonfire";
+  gap: 3.2rem;
+}
+.forest {
+  grid-area: forest;
+}
+
+.rain{
+  grid-area: rain;
+}
+.coffee{
+  grid-area: coffee;
+}
+.bonfire{
+  grid-area: bonfire;
+}
+#sounds button{
+  width: 9.2rem; 
+  height: 9.8rem;
+
+}
+
+#sounds div{
+  /* border: 1px solid red; */
+  width: 9.2rem; 
+  height: 9.8rem;
+}
+
+
+#sounds div input{ 
+  position: relative;
+  bottom: 2.7rem;
+
+  left: 24.5px;
+
+  
+}
+
+
+input[type=range] {
+   
+    -webkit-appearance: none;
+    
+    
+    border-radius: 3px;
+    
+   
+    width: 6.3rem;
+
+  
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 6.3rem;
+  height: 5px;
+  border: none;
+  border-radius: 3px;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  margin-top: -4px;
+}
+input[type=range]:focus {
+  outline: none;
+}
+body.day  button.focus ~ input[type=range]::-webkit-slider-thumb,
+body.day button.focus ~ input[type=range]::-webkit-slider-runnable-track {
+  background: white;
+}
+body.day input[type=range]::-webkit-slider-thumb,
+body.day input[type=range]::-webkit-slider-runnable-track{
+  background: #323238;
+}
+
+input[type=range]::-webkit-slider-thumb,
+input[type=range]::-webkit-slider-runnable-track{
+  background: #ffffff;
+}
