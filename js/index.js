@@ -81,15 +81,8 @@ function sounds() {
   }
 }
 
-// function UpdatePercentage(params) {
-//   update = setTimeout(function () {
-//     percentage = parseInt(document.querySelector('.volume').value)
-//     soundsForest.volume = (percentage/100)
-//   UpdatePercentage()
-//   },1)
-  
-// }
-// 
+
+
 
 function UpdatePercentage() {
   update = setTimeout(function (){
@@ -221,7 +214,6 @@ function countdown() {
     if (finished) {
       kitchenTimer.play()
       updateDisplay()
-      // play()
       return
     }
 
@@ -280,9 +272,3 @@ buttonBonfire.addEventListener('click', function () {
 buttonMode.addEventListener('click', function () {
   Mode()
 })
-
-
-
-
-
-
